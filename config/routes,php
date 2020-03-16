@@ -1,0 +1,12 @@
+<?php
+
+use App\Controller\MyController;
+use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\RouteCollection;
+
+$routes = new RouteCollection();
+$routes->add('gallery', new Route('/gallery', [
+    '_controller' => [MyController::class, 'gallery']
+]));
+
+return $routes;
